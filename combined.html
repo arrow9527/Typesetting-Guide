@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>勞保局展示</title>
+	<script src="../js/initial.js"></script>
+	<script src="./Navbar.js"></script>
+	<!-- highlight.js v9.12.0 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<script>
+	$ (document).ready (function () {
+		hljs.initHighlightingOnLoad();
+    });
+</script>
+<body>
+	<!--內容區-->
+	<div class="container">
+		<h3>常用輸入框組合</h3>
+		<p>時間區間 / 數字區間</p>
+		<div class="card">
+			<div class="card-body">
+				<input class="form-control mr-1" type="text" style="display: inline-block;width: 122px;">~<input class="form-control ml-1" type="text" style="display: inline-block;width: 122px;">
+			</div>
+		</div>
+<pre><code class="haml">
+&lt;input class=&quot;form-control mr-1&quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;~&lt;input class=&quot;form-control ml-1&quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;
+
+</code></pre>
+		<!--END 常用輸入框組合-->
+		<h3>radio 單選組合</h3>
+		<p>radio btn + 文字 + text field</p>
+		<div class="card">
+			<div class="card-body">
+				<div class="form-group image-check">
+					<label><input class="mr-1" type="radio">指定每</label><input class="form-control mx-1" type="text" style="display: inline-block;width: 122px;">提供資料
+				</div>
+			</div>
+		</div>
+<pre><code class="haml">
+&lt;div class=&quot;form-group image-check&quot;&gt;
+	&lt;label&gt;&lt;input class=&quot;mr-1&quot; type=&quot;radio&quot;&gt;指定每&lt;/label&gt;&lt;input class=&quot;form-control mx-1&quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;提供資料
+&lt;/div&gt;
+
+</code></pre>
+		<!--END radio 單選組合-->
+		<h3>button 按鈕組合</h3>
+		<p>有主動作的按鈕組</p>
+		<div class="card">
+			<div class="card-body">
+				<button type="button" class="btn btn-normal mr-3">下一步</button><button type="button" class="btn btn-outline-normal">返回</button>
+			</div>
+		</div>
+<pre><code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal mr-3&quot;&gt;下一步&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal&quot;&gt;返回&lt;/button&gt;
+
+</code></pre>
+		<div class="card">
+			<div class="card-body">
+				<button type="button" class="btn btn-normal mr-3">查詢</button><button type="button" class="btn btn-outline-normal">清除</button>
+			</div>
+		</div>
+<pre><code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal mr-3&quot;&gt;查詢&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal&quot;&gt;清除&lt;/button&gt;
+
+</code></pre>
+		<div class="card">
+			<div class="card-body">
+				<button type="button" class="btn btn-normal mr-3">儲存</button><button type="button" class="btn btn-outline-normal">返回</button>
+			</div>
+		</div>
+<pre><code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal mr-3&quot;&gt;儲存&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal&quot;&gt;返回&lt;/button&gt;
+
+</code></pre>
+		<p>沒有主次之分的按鈕組</p>
+		<div class="card">
+			<div class="card-body">
+				<button type="button" class="btn btn-outline-normal mr-3">列印</button><button type="button" class="btn btn-outline-normal">返回</button>
+			</div>
+		</div>
+<pre><code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal mr-3&quot;&gt;列印&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal&quot;&gt;返回&lt;/button&gt;
+
+</code></pre>
+		<p>grid 內的按鈕組</p>
+		<div class="card">
+			<div class="card-body">
+				<nav class="link-group">
+					<a href="javascript:" class="link-item">明細</a>
+					<a href="javascript:" class="link-item">修改</a>
+					<a href="javascript:" class="link-item">刪除</a>
+				</nav>
+			</div>
+		</div>
+<pre><code class="haml">
+&lt;nav class=&quot;link-group&quot;&gt;
+	&lt;a href=&quot;javascript:&quot; class=&quot;link-item&quot;&gt;明細&lt;/a&gt;
+	&lt;a href=&quot;javascript:&quot; class=&quot;link-item&quot;&gt;修改&lt;/a&gt;
+	&lt;a href=&quot;javascript:&quot; class=&quot;link-item&quot;&gt;刪除&lt;/a&gt;
+&lt;/nav&gt;
+
+</code></pre>
+		<!--END button 按鈕組合-->
+		
+	</div>
+</body>
+</html>

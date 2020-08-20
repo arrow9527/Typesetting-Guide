@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>勞保局展示</title>
+  <script src="../js/initial.js"></script>
+  <script src="./Navbar.js"></script>
+  <!-- highlight.js v9.12.0 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<script>
+  $ (document).ready (function () {
+      hljs.initHighlightingOnLoad();
+      //產生選單
+      var menuArry = [
+        { id: 1, name: "所有連結", pid: 0, url: null },
+        { id: 2, name: "原件庫", pid: 1, url: null },
+        { id: 4, name: "Buttons", pid: 2, url: '/'+contextPath+'/example_1.html' },
+        { id: 4, name: "Combined items", pid: 2, url: '/'+contextPath+'/example_2.html' },
+        { id: 6, name: "Forms", pid: 2, url: '/'+contextPath+'/example_3.html' },
+        { id: 7, name: "Tables", pid: 2, url: '/'+contextPath+'/example_4.html' },
+        { id: 8, name: "Typography", pid: 2, url: '/'+contextPath+'/example_5.html' },
+        { id: 9, name: "Tag", pid: 2, url: '/'+contextPath+'/example_6.html' },
+        { id: 10, name: "Pagination", pid: 2, url: '/'+contextPath+'/example_7.html' },
+        { id: 11, name: "Navigation", pid: 2, url: '/'+contextPath+'/example_8.html' },
+      ];//假資料
+      var menus = $('<div/>').attr('id', 'sidebar').css({
+        'position': 'absolute',
+        'top': 0,
+        'height': '100%'
+      });
+      menus.GetData1(0, menuArry);
+      //插入DOM元素
+      $('aside#menu2').eq(0).html('').css({
+        'background': '#a6d578',
+        'paddingTop': 0,
+        'position': 'relative',
+        'height': '500px'
+      });//清空內容
+      $('aside#menu2').append(menus);
+      $('.sub.parent-child').hide();//子目錄隱藏
+      $('.sub.parent-sun').hide();//孫目錄隱藏
+      //監聽點擊事件 並開闔菜單選單
+      $('.menu-toggle').click(function (e) {
+          var duration = 500;//轉換時間
+          var $item = $(this).next('ul');
+          $item.slideToggle(duration,function(){ //往下開 完成後重置滾動條
+            $("#sidebar").getNiceScroll().resize();
+          });
+          $(this).delay(duration).toggleClass('active');
+      });
+      //監聽點擊事件 並開闔滑動選單
+      $('#sidebarCollapse').unbind( "click" ).click(function (e) {
+        var duration = 500;
+        var positionLeft =$('aside#menu2').position().left;
+        if(positionLeft>0){
+          $('aside#menu2').animate({
+            left: (-1)*(236+positionLeft)+'px',
+          },duration).css('boxShadow', 'none');
+          $('#sidebar').css('borderRight', '3px #a6d578 solid');
+          $(this).html('選單').animate({//選單按鈕
+            width: '56px'
+          },duration);
+        }else{//open
+          $('aside#menu2').animate({
+            left: 0,
+          },duration).css('boxShadow', '0 2px 4px #4d4d4d');
+          $('#sidebar').css('borderRight', 0);
+          $(this).html('關閉').animate({//選單按鈕
+            width: '239px'
+          },duration);
+        }
+      });
+    });
+</script>
+
+<body>
+  <div class="container">
+    <h1>Navigation</h1>
+    <h3>滑動選單</h3>
+    <p>當標籤<code class="haml">&lt;aside id=&quot;menu&quot;&gt;&lt;/aside&gt;</code>存在時，createMenu.js將自動產生選單，選單的樣式定位等都會設好。</p>
+    <div class="card">
+      <div class="card-body" style="overflow: hidden;">
+        <aside id="menu2"></aside>
+      </div>
+    </div>
+    <div class="mb-5"></div>
+    <h3>置底操作欄</h3>
+    <p>置底分為兩個部分，分別是操作選單滑動開關的按鈕跟訊息區，當<code class="haml">#sidebarCollapse</code>存在時，createMenu.js將監聽其onclick事件，並觸發滑動選單開關。</p>
+    <div class="card">
+      <div class="card-body" style="height:132px;">
+        <footer style="font-size:0;bottom:0;">
+          <div class="toggler" id="sidebarCollapse" style="position:relative;display:inline-block;">關閉</div>
+          <article id="resultsContainer" style="position:relative;display:inline-block;left:auto;">
+              <div class="messageHeader" data-toggle="collapse" data-target="#messageCollapse" aria-expanded="false" aria-controls="messageCollapse">▼【 訊息區 】</div>
+              <div class="collapse" id="messageCollapse" style="font-size:16px">
+                格式錯誤，如民國97年6月，請輸入09706
+              </div>
+          </article><!-- 訊息區END -->
+        </footer>
+      </div>
+    </div>
+<pre><code class="haml">
+&lt;!-- 置底 --&gt;
+&lt;footer&gt;
+    &lt;div class=&quot;toggler&quot; id=&quot;sidebarCollapse&quot;&gt;關閉&lt;/div&gt;
+    &lt;article id=&quot;resultsContainer&quot;&gt;
+        &lt;div class=&quot;messageHeader&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#messageCollapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;messageCollapse&quot;&gt;
+            ▼【 訊息區 】
+        &lt;/div&gt;
+        &lt;div class=&quot;collapse&quot; id=&quot;messageCollapse&quot;&gt;
+            格式錯誤，如民國97年6月，請輸入09706
+        &lt;/div&gt;
+    &lt;/article&gt;&lt;!-- 訊息區END --&gt;
+&lt;/footer&gt;
+</code></pre>
+  </div>
+</body>
+
+</html>

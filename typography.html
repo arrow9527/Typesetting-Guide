@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>勞保局展示</title>
+	<script src="../js/initial.js"></script>
+  	<script src="./Navbar.js"></script>
+  	<!-- highlight.js v9.12.0 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<!-- 	<style>
+		/*方便看內距*/
+		h1,h2,h3,h4,h5,p,span{
+			display: block;
+		}
+	</style> -->
+</head>
+<script>
+	$ (document).ready (function () {
+		hljs.initHighlightingOnLoad();
+    });
+</script>
+<body>
+	<!--內容區-->
+	<div class="container">
+		<h1>Typography</h1>
+		<p><code class="haml">&lt;body&gt;</code>字型設定font-family:  Arial, 細明體, CMEX標宋, CMEX標楷, "微軟正黑體", "Microsoft JhengHei", sans-serif ;</p>
+		<table class="table">
+		  <thead class="thead-light">
+		    <tr>
+		      <th scope="col">Style</th>
+		      <th scope="col">Size(px)</th>
+		      <th scope="col">Line height</th>
+		      <th scope="col">Rem</th>
+		      <th scope="col">Usage</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td scope="row"><span class="h1">Title - 28</span></td>
+		      <td>28</td>
+		      <td>38</td>
+		      <td>1.75</td>
+		      <td><p><code class="haml">&lt;h1&gt;&lt;/h1&gt;</code></p></td>
+		    </tr>
+		    <tr>
+		      <td scope="row"><span class="h2">Title - 24</span></td>
+		      <td>24</td>
+		      <td>32</td>
+		      <td>1.5</td>
+		      <td><p><code class="haml">&lt;h2&gt;&lt;/h2&gt;</code></p></td>
+		    </tr>
+		    <tr>
+		      <td scope="row"><span class="h3">Title - 20</span></td>
+		      <td>20</td>
+		      <td>28</td>
+		      <td>1.25</td>
+		      <td><p><code class="haml">&lt;h3&gt;&lt;/h3&gt;</code></p></td>
+		    </tr>
+		    <tr>
+		      <td scope="row"><span class="h4">Title - 18</span></td>
+		      <td>18</td>
+		      <td>24</td>
+		      <td>1.125</td>
+		      <td><p><code class="haml">&lt;h4&gt;&lt;/h4&gt;</code></p></td>
+		    </tr>
+		    <tr>
+		      <td scope="row"><span class="h5">Title - 16</span></td>
+		      <td>16</td>
+		      <td>22</td>
+		      <td>1</td>
+		      <td><p><code class="haml">&lt;h5&gt;&lt;/h5&gt;</code></p></td>
+		    </tr>
+		    <tr>
+		      <td scope="row"><span>body - 16</span></td>
+		      <td>16</td>
+		      <td>22</td>
+		      <td>1</td>
+		      <td>內文、表單文字、超連結文字</td>
+		    </tr>
+		    <tr>
+		      <td scope="row"><p>p - 14</p></td>
+		      <td>14</td>
+		      <td>20</td>
+		      <td>0.875</td>
+		      <td><p><code class="haml">&lt;p&gt;&lt;/p&gt;</code></p></td>
+		    </tr>
+		    <tr>
+		      <td scope="row"><p><small>Extra info - 12</small></p></td>
+		      <td>12</td>
+		      <td>18</td>
+		      <td>0.875</td>
+		      <td><p><code class="haml">&lt;small&gt;&lt;/small&gt;</code></p></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<!-- 文字對齊說明 -->
+		<h3>Text Alignment</h3>
+		<p>中英文內文文字一律齊左，使用類別<code class="haml">.text-left</code>或預設。</p>
+		<div class="card">
+			<div class="card-body">
+				<p class="text-left">中文文字ABCabc</p>
+			</div>
+		</div>
+<pre>
+<code class="haml">
+&lt;p class=&quot;text-left&quot;&gt;中文文字ABCabc&lt;/p&gt;
+
+</code>
+</pre>
+		<p>數字一律齊右，數字且為金額、數量、筆數需加千分號，使用類別<code class="haml">.text-right</code>。</p>
+		<div class="card">
+			<div class="card-body">
+				<p class="text-right">202012240900</p>
+				<p class="text-right">12,000,000</p>
+			</div>
+		</div>
+<pre>
+<code class="haml">
+&lt;p class=&quot;text-right&quot;&gt;202012240900&lt;/p&gt;
+&lt;p class=&quot;text-right&quot;&gt;12,000,000&lt;/p&gt;
+
+</code>
+</pre>
+	</div>
+	<!--內容區結束-->
+
+</body>
+</html>

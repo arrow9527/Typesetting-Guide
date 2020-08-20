@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>勞保局展示</title>
+	<script src="../js/initial.js"></script>
+	<script src="./Navbar.js"></script>
+	<!-- highlight.js v9.12.0 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<script>
+	$ (document).ready (function () {
+		hljs.initHighlightingOnLoad();
+    });
+</script>
+<body>
+	<div class="container">
+		<h1>Buttons</h1>
+		<p>按鈕類型分為 4 類</p>
+		<ul>
+			<li>主按鈕：用於主要動作，一個操作區只能有一個主按鈕。</li>
+			<li>預設按鈕：即次級按鈕，當一組動作不知道怎麼分主次的時候，就用它吧。</li>
+			<li>文字按鈕：用於最次要的動作，非必要操作或大量出現的動作，常是在 grid 內、表單、說明中間的動作，如：補寄確認信、grid內的「開啟」。</li>
+			<li>圖示按鈕：用於不換頁的互動行為，若是純圖示需有 tooltips 輔助說明，如：展開、查看說明。</li>
+		</ul>
+		<div class="row mb-5">
+			<div class="col-3">
+				<strong>主按鈕</strong><br>
+				<button type="button" class="btn btn-normal">新增</button>
+			</div>
+			<div class="col-3">
+				<strong>預設按鈕</strong><br>
+				<button type="button" class="btn btn-outline-normal">修改</button>
+			</div>
+			<div class="col-3">
+				<strong>文字按鈕</strong><br>
+				<button type="button" class="btn btn-text-normal">刪除</button>
+			</div>
+			<div class="col-3">
+				<strong>圖示按鈕</strong><br>
+				<button type="button" class="btn btn-icon far fa-question-circle btn-lg"></button>
+			</div>
+		</div>
+		<h2>主按鈕(淺色底情境)</h2>
+		<p>按鈕距離左右最小間距20px(style="margin-right: 20px")，或使用(<code class="haml">.mr-4</code>/<code class="haml">.ml-4</code>)使其達到24px，較小的按鈕左右最小間距16px(<code class="haml">.mr-3</code>/<code class="haml">.ml-3</code>)，按鈕距離上下最小間距12px(style="margin-bottom: 12px;")，或使用(<code class="haml">.mt-3</code>/<code class="haml">.mb-3</code>)使其達到16px。</p>
+		<div class="card">
+			<div class="card-body">
+				<button type="button" class="btn btn-normal mr-4 mb-3">新增</button>
+				<button type="button" class="btn btn-normal mr-4 mb-3" disabled>新增</button>
+				<button type="button" class="btn btn-normal active mb-3">新增</button>
+			  	<br><!-- 較小的按鈕 -->
+				<button type="button" class="btn btn-normal btn-sm mr-3">修改</button>
+				<button type="button" class="btn btn-normal btn-sm mr-3" disabled>修改</button>
+				<button type="button" class="btn btn-normal btn-sm active">修改</button>
+			</div>
+		</div>
+<pre>
+<code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal mr-4 mb-3&quot;&gt;新增&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal mr-4 mb-3&quot; disabled&gt;新增&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal active mb-3&quot;&gt;新增&lt;/button&gt;
+&lt;br&gt;&lt;!-- 較小的按鈕 --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal btn-sm mr-3&quot;&gt;修改&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal btn-sm mr-3&quot; disabled&gt;修改&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal btn-sm active&quot;&gt;修改&lt;/button&gt;
+
+</code>
+</pre>
+		<h2>次級按鈕(淺色底情境)</h2>
+		<div class="card">
+			<!-- <div class="card-header">次級按鈕(淺色底情境)</div> -->
+			<div class="card-body">
+				<button type="button" class="btn btn-outline-normal btn-sm mr-3">修改</button>
+				<button type="button" class="btn btn-outline-normal btn-sm mr-3" disabled>修改</button>
+				<button type="button" class="btn btn-outline-normal btn-sm active">修改</button>
+			</div>
+		</div>
+<pre>
+<code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal btn-sm mr-3&quot;&gt;修改&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal btn-sm mr-3&quot; disabled&gt;修改&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal btn-sm active&quot;&gt;修改&lt;/button&gt;
+
+</code>
+</pre>
+		<!-- 深色底情境 -->
+		<h2>深色底情境</h2>
+		<div class="card text-white bg-dark">
+			<!-- <div class="card-header">深色底情境(按鈕中無填色)</div> -->
+			<div class="card-body">
+				<button type="button" class="btn btn-normal btn-sm mr-3">查詢</button>
+				<button type="button" class="btn btn-normal btn-sm mr-3" disabled>查詢</button>
+				<button type="button" class="btn btn-normal active btn-sm mr-3">查詢</button>
+				<button type="button" class="btn btn-invert-normal btn-sm mr-3">查詢</button>
+				<button type="button" class="btn btn-invert-normal btn-sm mr-3" disabled>查詢</button>
+				<button type="button" class="btn btn-invert-normal active btn-sm mr-3">查詢</button>
+			</div>
+		</div>
+<pre>
+<code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal btn-sm mr-3&quot;&gt;查詢&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal btn-sm mr-3&quot; disabled&gt;查詢&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-normal active btn-sm mr-3&quot;&gt;查詢&lt;/button&gt;
+&lt;!-- 按鈕中無填色 --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-invert-normal btn-sm mr-3&quot;&gt;查詢&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-invert-normal btn-sm mr-3&quot; disabled&gt;查詢&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-invert-normal active btn-sm mr-3&quot;&gt;查詢&lt;/button&gt;
+
+</code>
+</pre>
+		<!-- 文字按鈕 -->
+		<h2>文字按鈕</h2>
+		<div class="card mt-3">
+			<!-- <div class="card-header">文字按鈕</div> -->
+			<div class="card-body">
+				<button type="button" class="btn btn-text-normal btn-sm">刪除</button>
+				<button type="button" class="btn btn-text-normal btn-sm" disabled>刪除</button>
+				<button type="button" class="btn btn-text-blank btn-sm">新開視窗</button>
+				<button type="button" class="btn btn-text-blank btn-sm" disabled>新開視窗</button>
+				<button type="button" class="btn btn-text-muted btn-sm">顯示明細</button>
+				<button type="button" class="btn btn-text-muted btn-sm" disabled>顯示明細</button>
+			</div>
+		</div>
+<pre>
+<code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-normal btn-sm&quot;&gt;刪除&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-normal btn-sm&quot; disabled&gt;刪除&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-blank btn-sm&quot;&gt;新開視窗&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-blank btn-sm&quot; disabled&gt;新開視窗&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-muted btn-sm&quot;&gt;顯示明細&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-muted btn-sm&quot; disabled&gt;顯示明細&lt;/button&gt;
+
+</code>
+</pre>
+		<!-- 文字按鈕(深色底情境) -->
+		<h2>文字按鈕(深色底情境)</h2>
+		<p>深色情境下新開視窗與一般同</p>
+		<div class="card mt-3 text-white bg-dark">
+			<div class="card-body">
+				<button type="button" class="btn btn-text-darkmod btn-sm">刪除</button>
+				<button type="button" class="btn btn-text-darkmod btn-sm" disabled>刪除</button>
+				<button type="button" class="btn btn-text-blank btn-sm">新開視窗</button>
+				<button type="button" class="btn btn-text-blank btn-sm" disabled>新開視窗</button>
+			</div>
+		</div>
+<pre>
+<code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-darkmod btn-sm&quot;&gt;刪除&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-darkmod btn-sm&quot; disabled&gt;刪除&lt;/button&gt;
+&lt;!-- 深色情境下新開視窗與一般同 --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-blank btn-sm&quot;&gt;新開視窗&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-blank btn-sm&quot; disabled&gt;新開視窗&lt;/button&gt;
+
+</code>
+</pre>
+		<!-- 按鈕帶icon -->
+		<h2>按鈕帶icon</h2>
+		<p>icon與文字間距4px(<code class="haml">.mr-1</code>/<code class="haml">.ml-1</code>)，方向性箭頭icon與文字間距2px(<code class="haml">.mr-h</code>/<code class="haml">.ml-h</code>)</p>
+		<div class="card mt-3">
+			<div class="card-body">
+				<button type="button" class="btn btn-text-normal btn-sm"><i class="far fa-star mr-1"></i>儲存</button>
+				<button type="button" class="btn btn-text-normal btn-sm"><i class="fas fa-search mr-1"></i>搜尋</button>
+				<button type="button" class="btn btn-text-normal btn-sm">更多<i class="fas fa-chevron-down ml-h"></i></button>
+			</div>
+		</div>
+<pre>
+<code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-normal btn-sm&quot;&gt;&lt;i class=&quot;far fa-star mr-1&quot;&gt;&lt;/i&gt;儲存&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-normal btn-sm&quot;&gt;&lt;i class=&quot;fas fa-search mr-1&quot;&gt;&lt;/i&gt;搜尋&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-text-normal btn-sm&quot;&gt;更多&lt;i class=&quot;fas fa-chevron-down ml-h&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+
+</code>
+</pre>
+		<!-- icon按鈕 -->
+		<h3>icon按鈕</h3>
+		<p>使用Font Awesome icons加入按鈕類別<code class="haml">.btn btn-icon</code>，預設尺寸16px，較大尺寸24px(<code class="haml">.btn-lg</code>)</p>
+		<div class="card mt-3">
+			<div class="card-body">
+				<button type="button" class="btn btn-icon far fa-question-circle btn-lg"></button>
+				<button type="button" class="btn btn-icon far fa-question-circle btn-lg" disabled></button>
+				<button type="button" class="btn btn-icon far fa-question-circle"></button>
+				<button type="button" class="btn btn-icon far fa-question-circle" disabled></button>
+				<!-- <button type="button" class="btn btn-icon far fa-question-circle btn-sm"></button> -->
+			</div>
+		</div>
+<pre>
+<code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-icon far fa-question-circle btn-lg&quot;&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-icon far fa-question-circle btn-lg&quot; disabled&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-icon far fa-question-circle&quot;&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-icon far fa-question-circle&quot; disabled&gt;&lt;/button&gt;
+
+</code>
+</pre>
+	</div>
+
+	<div id="main-content">
+		<article id="inputContainer">
+			
+
+		</article>
+	</div>
+
+</body>
+</html>

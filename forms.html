@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>勞保局展示</title>
+  <script src="../js/initial.js"></script>
+  <script src="./Navbar.js"></script>
+  <!-- highlight.js v9.12.0 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<script>
+  $ (document).ready (function () {
+    hljs.initHighlightingOnLoad();
+    });
+</script>
+
+<body>
+  <div class="container">
+    <h1>Text fields</h1>
+    <p>常用的長度有6、4、2、1個col</p>
+    <div class="card">
+      <div class="card-body">
+        <!-- 長度6 -->
+        <div class="form-group row">
+          <label class="col-1 col-form-label">長度6</label>
+          <div class="col-6">
+            <input class="form-control">
+          </div>
+        </div>
+        <!-- 長度4 -->
+        <div class="form-group row">
+          <label class="col-1 col-form-label">長度4</label>
+          <div class="col-4">
+            <input class="form-control">
+          </div>
+        </div>
+        <!-- 長度2 -->
+        <div class="form-group row">
+          <label class="col-1 col-form-label">長度2</label>
+          <div class="col-2">
+            <input class="form-control">
+          </div>
+        </div>
+        <!-- 長度1 -->
+        <div class="form-group row">
+          <label class="col-1 col-form-label">長度1</label>
+          <div class="col-1">
+            <input class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+<pre>
+<code class="haml">
+&lt;!-- 長度6 --&gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度6&lt;/label&gt;
+  &lt;div class=&quot;col-6&quot;&gt;
+    &lt;input class=&quot;form-control&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- 長度4 --&gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度4&lt;/label&gt;
+  &lt;div class=&quot;col-4&quot;&gt;
+    &lt;input class=&quot;form-control&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- 長度2 --&gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度2&lt;/label&gt;
+  &lt;div class=&quot;col-2&quot;&gt;
+    &lt;input class=&quot;form-control&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- 長度1 --&gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度1&lt;/label&gt;
+  &lt;div class=&quot;col-1&quot;&gt;
+    &lt;input class=&quot;form-control&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+    <h3></h3>
+    <p>加入disabled屬性使其禁用，加入<code class="haml">.is-invalid</code>類別呈現紅色警告框</p>
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group row">
+          <!-- Disabled -->
+          <label class="col-1 col-form-label">標題</label>
+          <div class="col-4">
+            <input class="form-control" placeholder="Disabled input" disabled>
+          </div>
+          <div class="col-1"></div>
+          <!-- invalid -->
+          <label class="col-1 col-form-label">標題</label>
+          <div class="col-4">
+            <input class="form-control is-invalid" placeholder="invalid">
+          </div>
+        </div>
+      </div>
+    </div>
+<pre>
+<code class="haml">
+&lt;div class=&quot;form-group row&quot;&gt;
+  &lt;!-- Disabled --&gt;
+  &lt;label class=&quot;col-1 col-form-label&quot;&gt;標題&lt;/label&gt;
+  &lt;div class=&quot;col-4&quot;&gt;
+    &lt;input class=&quot;form-control&quot; placeholder=&quot;Disabled input&quot; disabled&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-1&quot;&gt;&lt;/div&gt;
+  &lt;!-- invalid --&gt;
+  &lt;label class=&quot;col-1 col-form-label&quot;&gt;標題&lt;/label&gt;
+  &lt;div class=&quot;col-4&quot;&gt;
+    &lt;input class=&quot;form-control is-invalid&quot; placeholder=&quot;invalid&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+    <h1>Dropdown</h1>
+    <p>使用<code class="haml">&lt;select&gt;</code>標籤styleselect.js將會產生選單樣式化的DOM，元素外框容器則依select給的類別定義，使用<code class="html">.custom-select</code>。預設尺寸高度為38px，較小尺寸的高度為32px，加入<code class="html">.custom-select-sm</code>類別使用。</p>
+    <div class="card">
+      <div class="card-body">
+        <select class="custom-select mb-3">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <!-- 小尺寸 -->
+        <select class="custom-select custom-select-sm">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+<pre>
+<code class="haml">
+&lt;select class=&quot;custom-select mb-3&quot;&gt;
+  &lt;option selected&gt;Open this select menu&lt;/option&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+&lt;/select&gt;
+&lt;!-- 小尺寸 --&gt;
+&lt;select class=&quot;custom-select custom-select-sm&quot;&gt;
+  &lt;option selected&gt;Open this select menu&lt;/option&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+&lt;/select&gt;
+
+</code>
+</pre>
+<p>上面範例將產生一DIV容器包裹隱藏的原select跟樣式化的元素</p>
+<pre>
+<code class="haml">
+&lt;!-- 下拉容器 --&gt;
+&lt;div class=&quot;custom-select mb-3&quot;&gt;
+  &lt;!-- 隱藏的select --&gt;
+  &lt;select class=&quot;custom-select mb-3 s-hidden&quot;&gt;
+        &lt;option selected=&quot;&quot;&gt;Open this select menu&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;!-- 顯示目前選項 --&gt;
+    &lt;div class=&quot;&quot;&gt;Open this select menu&lt;/div&gt;
+    &lt;!-- 所有選項 --&gt;
+    &lt;ul class=&quot;options&quot; style=&quot;display: none;&quot;&gt;
+        &lt;li rel=&quot;Open this select menu&quot;&gt;Open this select menu&lt;/li&gt;
+        &lt;li rel=&quot;1&quot;&gt;One&lt;/li&gt;
+        &lt;li rel=&quot;2&quot;&gt;Two&lt;/li&gt;
+        &lt;li rel=&quot;3&quot;&gt;Three&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+
+    <h1>Radio button</h1>
+    <p>將<code class="haml">.image-check</code>做容器使用，通過radio_checkbox.js，容器內的Radios將自動產生樣式化元素取代瀏覽器原生。</p>
+    <div class="card">
+      <div class="card-body">
+        <div class="image-check">
+          <input type="radio" id="exampleRadios0" name="exampleRadios">
+          <label for="exampleRadios0">Default radio</label>
+          <input type="radio" id="exampleRadios1" name="exampleRadios" checked>
+          <label for="exampleRadios1">Default radio</label>
+          <input type="radio" id="exampleRadios2" disabled>
+          <label for="exampleRadios2">Disabled radio</label>
+          <input checked="checked" type="radio" id="exampleRadios3" disabled>
+          <label for="exampleRadios3">Disabled radio</label>
+        </div>
+      </div>
+    </div>
+<pre>
+<code class="haml">
+&lt;div class=&quot;image-check&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;exampleRadios0&quot; name=&quot;exampleRadios&quot;&gt;
+  &lt;label for=&quot;exampleRadios0&quot;&gt;Default radio&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;exampleRadios1&quot; name=&quot;exampleRadios&quot; checked&gt;
+  &lt;label for=&quot;exampleRadios1&quot;&gt;Default radio&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;exampleRadios2&quot; disabled&gt;
+  &lt;label for=&quot;exampleRadios2&quot;&gt;Disabled radio&lt;/label&gt;
+  &lt;input checked=&quot;checked&quot; type=&quot;radio&quot; id=&quot;exampleRadios3&quot; disabled&gt;
+  &lt;label for=&quot;exampleRadios3&quot;&gt;Disabled radio&lt;/label&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+    <h1>Checkbox</h1>
+    <p>將<code class="haml">.image-check</code>做容器使用，通過radio_checkbox.js，容器內的Checkbox將自動產生樣式化元素取代瀏覽器原生。</p>
+    <div class="card">
+      <div class="card-body">
+        <div class="image-check">
+          <input class="" type="checkbox" name="exampleCheckbox" id="exampleCheckbox1" checked>
+          <label class="" for="exampleCheckbox1">Default checkbox</label>
+          <input class="" type="checkbox" name="exampleCheckbox" id="exampleCheckbox2">
+          <label class="" for="exampleCheckbox2">Disabled checkbox</label>
+          <input checked="checked" type="checkbox" name="exampleCheckbox" id="exampleCheckbox3" disabled>
+          <label class="" for="exampleCheckbox3">Disabled checkbox</label>
+          <input type="checkbox" name="exampleCheckbox" id="exampleCheckbox4" disabled>
+          <label class="" for="exampleCheckbox4">Disabled checkbox</label>
+        </div>
+      </div>
+    </div>
+<pre>
+<code class="haml">
+&lt;div class=&quot;image-check&quot;&gt;
+  &lt;input class=&quot;&quot; type=&quot;checkbox&quot; name=&quot;exampleCheckbox&quot; id=&quot;exampleCheckbox1&quot; checked&gt;
+  &lt;label class=&quot;&quot; for=&quot;exampleCheckbox1&quot;&gt;Default checkbox&lt;/label&gt;
+  &lt;input class=&quot;&quot; type=&quot;checkbox&quot; name=&quot;exampleCheckbox&quot; id=&quot;exampleCheckbox2&quot;&gt;
+  &lt;label class=&quot;&quot; for=&quot;exampleCheckbox2&quot;&gt;Disabled checkbox&lt;/label&gt;
+  &lt;input checked=&quot;checked&quot; type=&quot;checkbox&quot; name=&quot;exampleCheckbox&quot; id=&quot;exampleCheckbox3&quot; disabled&gt;
+  &lt;label class=&quot;&quot; for=&quot;exampleCheckbox3&quot;&gt;Disabled checkbox&lt;/label&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;exampleCheckbox&quot; id=&quot;exampleCheckbox4&quot; disabled&gt;
+  &lt;label class=&quot;&quot; for=&quot;exampleCheckbox4&quot;&gt;Disabled checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+    <p>muliple不具傳值功能僅顯示用</p>
+    <div class="card">
+      <div class="card-body">
+        <div class="image-check">
+          <div class="styled-checkbox muliple checked"></div>
+          <label>muliple</label>
+          <div class="styled-checkbox muliple checked disabled"></div>
+          <label>Disabled muliple</label>
+        </div>
+      </div>
+    </div>
+<pre>
+<code class="haml">
+&lt;div class=&quot;image-check&quot;&gt;
+  &lt;div class=&quot;styled-checkbox muliple checked&quot;&gt;&lt;/div&gt;
+  &lt;label&gt;muliple&lt;/label&gt;
+  &lt;div class=&quot;styled-checkbox muliple checked disabled&quot;&gt;&lt;/div&gt;
+  &lt;label&gt;Disabled muliple&lt;/label&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+  </div>
+</body>
+
+</html>

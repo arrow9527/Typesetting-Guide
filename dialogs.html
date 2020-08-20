@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>勞保局展示</title>
+	<script src="../js/initial.js"></script>
+	<script src="./Navbar.js"></script>
+	<!-- highlight.js v9.12.0 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<script>
+	$(document).ready(function () {
+		hljs.initHighlightingOnLoad();
+	});
+</script>
+
+<body>
+	<div class="container">
+		<h2>Dialogs</h2>
+		<p>小-寬480px(用於純文字顯示)</p>
+		<ul>
+			<li>最小高度300，高度隨內容延展，最高不應超過720，超過以捲軸呈現</li>
+			<li>標題24字級, bold，內文16字級, regular</li>
+			<li>內文字框與上下間距各留36px </li>
+			<li>卡片四週邊距留24px , 導角12 radius , 陰影 Y:2dp, blur:20px , #a9a9a9</li>
+		</ul>
+		<div class="card">
+			<div class="card-body">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title">標題說明</h2>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>內容文字內容文字內容文字內容文字內容文字</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-normal">確定</button>
+							<button type="button" class="btn btn-outline-normal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<pre><code class="html">
+&lt;!-- 觸發Dialogs按鈕 --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;modal&quot; data-target=&quot;#exampleModa0&quot;&gt;
+	開啟Dialogs
+&lt;/button&gt;
+
+&lt;!-- Dialogs --&gt;
+&lt;div class=&quot;modal fade&quot; id=&quot;exampleModa0&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+	&lt;div class=&quot;modal-dialog&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;
+				&lt;h2 class=&quot;modal-title&quot;&gt;標題說明&lt;/h2&gt;
+				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-body&quot;&gt;
+				&lt;p&gt;內容文字內容文字內容文字內容文字內容文字&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-footer&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-normal&quot;&gt;確定&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal&quot;&gt;取消&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+		<!--END 純文字顯示-->
+		<h2>表單dialog</h2>
+		<div class="card">
+			<div class="card-body">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title" id="exampleModalLabel">文字型態為主的表單dialog</h2>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="image-check">
+								<input type="checkbox" name="exampleCheckbox" id="exampleCheckbox1">
+								<label for="exampleCheckbox1">整期</label>
+							</div>
+							<div class="image-check">
+								<input type="checkbox" name="exampleCheckbox" id="exampleCheckbox2">
+								<label for="exampleCheckbox2">指定起-迄年月</label>
+							</div>
+							<div class="image-check">
+								<input type="checkbox" name="exampleCheckbox" id="exampleCheckbox3">
+								<label for="exampleCheckbox3">指定起-迄年月</label>
+							</div>
+							<div class="image-check">
+								<input type="checkbox" name="exampleCheckbox" id="exampleCheckbox4">
+								<label for="exampleCheckbox4">指定起-迄年月</label>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-normal">確定</button>
+							<button type="button" class="btn btn-outline-normal" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<pre><code class="html">
+&lt;!-- 觸發Dialogs按鈕 --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;modal&quot; data-target=&quot;#exampleModa0&quot;&gt;
+	開啟Dialogs
+&lt;/button&gt;
+
+&lt;!-- Dialogs --&gt;
+&lt;div class=&quot;modal fade&quot; id=&quot;exampleModa0&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+	&lt;div class=&quot;modal-dialog&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;
+				&lt;h2 class=&quot;modal-title&quot; id=&quot;exampleModalLabel&quot;&gt;文字型態為主的表單dialog&lt;/h2&gt;
+				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-body&quot;&gt;
+				&lt;div class=&quot;image-check&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; name=&quot;exampleCheckbox&quot; id=&quot;exampleCheckbox1&quot;&gt;
+					&lt;label for=&quot;exampleCheckbox1&quot;&gt;整期&lt;/label&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;image-check&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; name=&quot;exampleCheckbox&quot; id=&quot;exampleCheckbox2&quot;&gt;
+					&lt;label for=&quot;exampleCheckbox2&quot;&gt;指定起-迄年月&lt;/label&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;image-check&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; name=&quot;exampleCheckbox&quot; id=&quot;exampleCheckbox3&quot;&gt;
+					&lt;label for=&quot;exampleCheckbox3&quot;&gt;指定起-迄年月&lt;/label&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;image-check&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; name=&quot;exampleCheckbox&quot; id=&quot;exampleCheckbox4&quot;&gt;
+					&lt;label for=&quot;exampleCheckbox4&quot;&gt;指定起-迄年月&lt;/label&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-footer&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-normal&quot;&gt;確定&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal&quot; data-dismiss=&quot;modal&quot;&gt;取消&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+		<!--END 表單dialog-->
+		<h2>大-寬800px (帶有 grid 的 dialog）</h2>
+		<p>grid 規格請參見「<a href="tables.html#Description">Description</a>」，搜尋互動請參見「Search」</p>
+		<div class="card">
+			<div class="card-body">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+					開啟Dialogs
+				</button>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title" id="exampleModalLabel">有grid及再次查詢的dialog</h2>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						</button>
+					</div>
+					<div class="modal-body">
+						<table class="table table-custom table-striped">
+							<thead>
+								<tr>
+								  <th>計費年月</th>
+								  <th>縣市別</th>
+								  <th>狀態</th>
+								  <th>完成筆數</th>
+								  <th>異常筆數
+								</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+								  <td>09712</td>
+								  <td>嘉義縣</td>
+								  <td>核定</td>
+								  <td class="text-right">39,876</td>
+								  <td class="text-right">0</td>
+								</tr>
+								<tr>
+								  <td>09712</td>
+								  <td>台中縣</td>
+								  <td></td>
+								  <td class="text-right">39,876</td>
+								  <td class="text-right">0</td>
+								</tr>
+								<tr>
+								  <td>09712</td>
+								  <td>基隆市</td>
+								  <td>執行失敗</td>
+								  <td class="text-right">39,876</td>
+								  <td class="text-right">0</td>
+								</tr>
+								<tr>
+								  <td>09712</td>
+								  <td>高雄市</td>
+								  <td>核定</td>
+								  <td class="text-right">39,876</td>
+								  <td class="text-right">0</td>
+								</tr>
+								<tr>
+								  <td>09712</td>
+								  <td>嘉義縣</td>
+								  <td></td>
+								  <td class="text-right">39,876</td>
+								  <td class="text-right">0</td>
+								</tr>
+								<tr>
+								  <td>09712</td>
+								  <td>台中縣</td>
+								  <td>核定</td>
+								  <td class="text-right">39,876</td>
+								  <td class="text-right">0</td>
+								</tr>
+								<tr>
+								  <td>09712</td>
+								  <td>基隆市</td>
+								  <td>核定</td>
+								  <td class="text-right">39,876</td>
+								  <td class="text-right">0</td>
+								</tr>
+								<tr>
+								  <td>09712</td>
+								  <td>高雄市</td>
+								  <td>核定</td>
+								  <td class="text-right">39,876</td>
+								  <td class="text-right">0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-normal" data-dismiss="modal">關閉</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

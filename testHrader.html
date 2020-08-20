@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!-- CSS Start -->
+    <link href="css/bootstrap/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/adjust.css" rel="stylesheet" />
+    <!-- CSS End -->
+    <!-- Script Start -->
+    <script src="js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- Script End -->
+    <title>TEST</title>
+    <style type="text/css">
+        /*header共用的*/
+        :root {
+            --headerHeight:100px;
+        }
+        header{
+            height: 100px;
+            padding: 0px 10px 0px 10px;
+            font-family: '微軟正黑體';
+            font-weight: 800;
+            background-color: #A6D578;
+        }
+        header .row{
+            height: 100%;
+            width: 100%;
+            
+        }
+
+        .logoImages{
+
+            background-image: url(img/logo.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            display: block;
+            height: 100%;
+            max-width: 300px;
+
+        }
+        .headerBunner{
+            background-image: url(img/headerBackground.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            height: 100%;
+        }
+
+        .memberText{
+            right: 0;
+            position: absolute;
+            max-width: 468px;
+        }
+
+        .localSize{
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .member {
+            margin: auto;
+            margin-top: 26px;
+            margin-bottom: 26px;
+            padding: 0px;
+        }
+
+        div#showtime {
+            padding-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header dark-bg fixed-top container-fluid">
+        <div class="row headerBunner">
+            <div class="col-4">
+                <div class="logoImages"></div>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4 memberText">
+                <div class="row">
+                    <div class="col-3 localSize">本機</div>
+                    <div class="col-9 member">
+                        <div class="row">
+                            <div class="col-12">登入人員 : 00001 李大同</div>
+                            <div class="col-12" id="showtime">目前時間 : 109/07/23 14:35:31（星期四）</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

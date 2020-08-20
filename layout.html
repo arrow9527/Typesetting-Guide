@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>勞保局展示</title>
+	<script src="../js/initial.js"></script>
+	<script src="./Navbar.js"></script>
+	<!-- highlight.js v9.12.0 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<style>
+		.bd-example-row .row>.col,
+		.bd-example-row .row>[class^=col-] {
+			background-color: rgba(228, 244, 255, 0.47);
+			/* background-clip: content-box; */
+			border-left: 8px solid #fff;
+			border-right: 8px solid #fff;
+			padding: 8px 0 8px 0;
+		}
+	</style>
+</head>
+<script>
+	$(document).ready(function () {
+		hljs.initHighlightingOnLoad();
+	});
+</script>
+
+<body>
+	<div class="container">
+		<h3>Descriptions</h3>
+		<ul>
+			<li>陳述型資料，為多段純瀏覽的文字</li>
+			<li>資料之間，至少間隔一個 gutter</li>
+		</ul>
+		<div class="card">
+			<div class="card-body bd-example-row">
+				<div class="form-group row">
+					<label class="col-1 col-form-label">姓名</label>
+					<div class="col-2 form-text">王醫龍</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+					<label class="col-1 col-form-label">身分證號</label>
+					<div class="col-2 form-text">A12345678</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+					<label class="col-1 col-form-label">出生日期</label>
+					<div class="col-2 form-text">057年02月10日</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+				</div>
+				<div class="form-group row">
+					<label class="col-1 col-form-label">受理時間</label>
+					<div class="col-2 form-text">108年12月07日</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+					<div class="col-4 form-text">截至受理日期108年12月07日止，未收金額0元，待扣抵金額1000元</div>
+					<div class="col-4"></div><!-- 留白 -->
+				</div>
+				<div class="form-group row">
+					<label class="col-1 col-form-label">繳費單編號</label>
+					<div class="col-2 form-text">0812D3010009766905700</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+					<div class="col-4 form-text">無前期保費資料</div>
+					<div class="col-4"></div><!-- 留白 -->
+				</div>
+				<div class="form-group row">
+					<label for="months" class="col-1 col-form-label">預繳月數</label>
+					<div class="col-2 form-text">1個月</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+					<label for="period" class="col-1 col-form-label">預繳金額</label>
+					<div class="col-3 form-text">3000元</div>
+					<label class="col-1 col-form-label">列印註記</label>
+					<div class="col-2 form-text">N</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+				</div>
+				<div class="form-group row">
+					<label class="col-1 col-form-label">轉帳代繳</label>
+					<div class="col-2 form-text">N</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+					<label class="col-1 col-form-label">承辦人員</label>
+					<div class="col-2 form-text">n00132</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+					<label for="memo" class="col-1 col-form-label">備註</label>
+					<div class="col-2 form-text">特別寫</div>
+					<div class="col-1 form-text"></div><!-- 留白 -->
+				</div>
+			</div>
+		</div>
+<pre><code class="haml">
+&lt;div class=&quot;form-group row&quot;&gt;
+	&lt;label class=&quot;col-1 col-form-label&quot;&gt;姓名&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;王醫龍&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+	&lt;label class=&quot;col-1 col-form-label&quot;&gt;身分證號&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;A12345678&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+	&lt;label class=&quot;col-1 col-form-label&quot;&gt;出生日期&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;057年02月10日&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group row&quot;&gt;
+	&lt;label class=&quot;col-1 col-form-label&quot;&gt;受理時間&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;108年12月07日&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+	&lt;div class=&quot;col-4 form-text&quot;&gt;截至受理日期108年12月07日止，未收金額0元，待扣抵金額1000元&lt;/div&gt;
+	&lt;div class=&quot;col-4&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group row&quot;&gt;
+	&lt;label class=&quot;col-1 col-form-label&quot;&gt;繳費單編號&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;0812D3010009766905700&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+	&lt;div class=&quot;col-4 form-text&quot;&gt;無前期保費資料&lt;/div&gt;
+	&lt;div class=&quot;col-4&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group row&quot;&gt;
+	&lt;label for=&quot;months&quot; class=&quot;col-1 col-form-label&quot;&gt;預繳月數&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;1個月&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+	&lt;label for=&quot;period&quot; class=&quot;col-1 col-form-label&quot;&gt;預繳金額&lt;/label&gt;
+	&lt;div class=&quot;col-3 form-text&quot;&gt;3000元&lt;/div&gt;
+	&lt;label class=&quot;col-1 col-form-label&quot;&gt;列印註記&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;N&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group row&quot;&gt;
+	&lt;label class=&quot;col-1 col-form-label&quot;&gt;轉帳代繳&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;N&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+	&lt;label class=&quot;col-1 col-form-label&quot;&gt;承辦人員&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;n00132&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+	&lt;label for=&quot;memo&quot; class=&quot;col-1 col-form-label&quot;&gt;備註&lt;/label&gt;
+	&lt;div class=&quot;col-2 form-text&quot;&gt;特別寫&lt;/div&gt;
+	&lt;div class=&quot;col-1 form-text&quot;&gt;&lt;/div&gt;&lt;!-- 留白 --&gt;
+  &lt;/div&gt;
+
+</code></pre>
+		<!-- END Descriptions-->
+		<ul>
+			<li>每個欄位都只有一筆內容，可採用「<a href="tables.html#水平列表">水平列表</a>」或「基本樣式」</li>
+			<li>有多筆相同標題的內容，可採用「<a href="tables.html#垂直列表">垂直列表</a>」</li>
+			<li>當欄位數量非常多、多種類別（如「應收」「溢收」各有一群資料），應該採用有底色的列表，以利使用者分辨</li>
+		</ul>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>勞保局展示</title>
+	<script src="../js/initial.js"></script>
+	<script src="./Navbar.js"></script>
+	<!-- highlight.js v9.12.0 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<script>
+	$ (document).ready (function () {
+		hljs.initHighlightingOnLoad();
+    });
+</script>
+<body>
+	<!--內容區-->
+	<div class="container">
+		<h2>間距</h2>
+		<p>類別使用下列格式 <code class="haml">{屬性}{方向}-{尺寸}</code>。</p>
+		<p>屬性:</p>
+		<ul>
+			<li><code class="haml">m</code> 對於 margin</li>
+			<li><code class="haml">p</code> 對於 padding</li>
+		</ul>
+		<p>方向:</p>
+		<ul>
+			<li><code class="haml">t</code> 對於上(margin-top 或 padding-top)</li>
+			<li><code class="haml">b</code> 對於下(margin-bottom 或 padding-bottom)</li>
+			<li><code class="haml">l</code> 對於左(margin-left 或 padding-left)</li>
+			<li><code class="haml">r</code> 對於 margin-right 或 padding-right</li>
+			<li><code class="haml">x</code> 對於 x軸 (*-left 或 *-right)</li>
+			<li><code class="haml">y</code> 對於 y軸 (*-top 或 *-bottom)</li>
+			<li>空白 對於四方(margin 或 padding)</li>
+		</ul>
+		<!--END 間距-->
+		<h2>頁面大標題</h2>
+		<p>為了切齊區域內元素及避免margin重疊，上距設定在父層<code class="haml">.page-heading</code>下距則在子元素<code class="haml">&lt;hr&gt;</code>。
+		<br>整個區域向上隔12px，標題文字向下離分隔線12px(分隔下向上隔12px)，整個區域向下離16px(分隔線向下離16px)。</p>
+		<div class="card">
+			<div class="card-body">
+				<div class="page-heading row">
+					<div class="col">
+					  <span class="h2">沖銷查詢作業 - npc30w232Q</span>
+					  <button type="button" class="btn btn-outline-normal btn-sm float-right">列印</button>
+					  <hr style="clear: both;">
+					</div>
+				</div>
+			</div>
+		</div>
+<pre><code class="html">
+&lt;div class=&quot;page-heading row&quot;&gt;
+	&lt;div class=&quot;col&quot;&gt;
+		&lt;span class=&quot;h2&quot;&gt;沖銷查詢作業 - npc30w232Q&lt;/span&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-normal btn-sm float-right&quot;&gt;列印&lt;/button&gt;
+		&lt;hr style=&quot;clear: both;&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+		<!-- END 頁面大標題 -->
+	</div>
+</body>
+</html>
