@@ -43,6 +43,9 @@ function insertNavbar(){
 			.append(
 				$('<li/>').addClass('nav-item').attr('id','navigationhtml').append('<a class="nav-link" href="./navigation.html">Navigation</a>')
 			)
+			.append(
+				$('<li/>').addClass('nav-item').attr('id','headerhtml').append('<a class="nav-link" href="./header.html">Header</a>')
+			)
 			// .append(
 			// 	$('<li/>').addClass('nav-item').attr('id','layouthtml').append('<a class="nav-link" href="./layout.html">Layout</a>')
 			// )
@@ -51,6 +54,9 @@ function insertNavbar(){
 			)
 			.append(
 				$('<li/>').addClass('nav-item').attr('id','dialogshtml').append('<a class="nav-link" href="./dialogs.html">Dialogs</a>')
+			)
+			.append(
+				$('<li/>').addClass('nav-item').attr('id','loadinghtml').append('<a class="nav-link" href="./loading.html">Loading</a>')
 			)
 			.append(
 				$('<li/>').addClass('nav-item').attr('id','spacinghtml').append('<a class="nav-link" href="./spacing.html">Spacing</a>')
