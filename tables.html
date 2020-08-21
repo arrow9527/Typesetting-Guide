@@ -12,30 +12,13 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	<style>
-		:root {
-			--bgcolor: rgba(228, 244, 255, 0.47);
-		}
-		.link-group {
-			color: #ddd;
-			font-size: 0;
-		}
-		.link-item {
-			display: inline-block;
-			font-family: MicrosoftJhengHeiBold;
-			font-weight: 400;
-			font-size: 1rem;
-			color: #679f32;
-			text-decoration: none;
-		}
-		.link-item:not(:disabled):not(.disabled):hover {
-			color: #a6d578;
-			text-decoration: none;
-		}
-		.link-item+.link-item::before {
-			display: inline-block;
-			padding: 0 .75rem;
-			color: #ddd;
-			content: "|";
+		.example-bg .d-flex.row {
+			background-image: repeating-linear-gradient(
+				90deg, 
+				#fff, #fff 8px, 
+				rgba(228, 244, 255, 0.47) 8px, rgba(228, 244, 255, 0.47) calc(8.333333% - 8px), 
+				#fff calc(8.333333% - 8px), #fff 8.333333%
+			);
 		}
 	</style>
 </head>
@@ -60,9 +43,9 @@
 			<li>當欄位數量非常多、多種類別（如「應收」「溢收」各有一群資料），應該採用有底色的列表，以利使用者分辨</li>
 		</ul>
 		<div class="card">
-			<div class="card-body">
+			<div class="card-body example-bg">
 				<table class="table">
-					<tbody style="background: repeating-linear-gradient(90deg, var(--bgcolor), var(--bgcolor) calc(8.33333% - 16px), white 0, white 8.33333%);">
+					<tbody>
 						<tr class="d-flex row">
 							<th class="col-1">開單期別</th>
 							<td class="col-2">王醫龍</td>
