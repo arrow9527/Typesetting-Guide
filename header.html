@@ -15,14 +15,14 @@
 <script>
 	$(document).ready(function () {
 		hljs.initHighlightingOnLoad();
+		setInterval('ShowTime()', 1000);//設定每一秒更新一次
 	});
 </script>
 
 <body>
 	<div class="container">
 		<h2>Header</h2>
-		<p>當標籤<code
-				class="haml">&lt;header id=&quot;topbar&quot;&gt;&lt;/header&gt;</code>存在時，headerInfo.js將自動產生選單，選單的樣式定位等都會設好。
+		<p>當標籤<code class="haml">&lt;header id=&quot;topbar&quot;&gt;&lt;/header&gt;</code>存在時，headerInfo.js將自動產生選單，選單的樣式定位等都會設好。
 		</p>
 		<ul>
 			<li>header 高度 100px</li>
@@ -36,14 +36,11 @@
 				<div class="text">
 					<span>本機</span><br>
 					<span>登入人員 :</span><br>
-					<span id="showtime">目前時間 : 109/08/20 17:34:35（星期四）</span>
+					<span id="showtime">目前時間 : </span>
 				</div>
 			</div>
 		</header>
-<pre><code class="haml">
-
-</code></pre>
-		<!---->
+		<!--END header-->
 
 	</div>
 </body>
