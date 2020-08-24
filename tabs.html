@@ -59,7 +59,29 @@
 
 </code></pre>
 		<!--END Tab-->
-		
+		<h2>動態標籤</h2>
+		<p>需要role="tablist"，role="tab"，role="tabpanel"，data-toggle="tab"。</p>
+		<div class="card">
+			<div class="card-body">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="nav-item" role="presentation">
+					  <a class="nav-link active" data-toggle="tab" href="#receivable" role="tab">應收帳款</a>
+					</li>
+					<li class="nav-item" role="presentation">
+					  <a class="nav-link" data-toggle="tab" href="#profile" role="tab">溢收帳款</a>
+					</li>
+					<li class="nav-item" role="presentation">
+					  <a class="nav-link" data-toggle="tab" href="#advance" role="tab">預收帳款</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="receivable" role="tabpanel">應收帳款...</div>
+					<div class="tab-pane fade" id="profile" role="tabpanel">溢收帳款...</div>
+					<div class="tab-pane fade" id="advance" role="tabpanel">預收帳款...</div>
+				</div>
+			</div>
+		</div>
+		<!---->
 	</div>
 </body>
 </html>
