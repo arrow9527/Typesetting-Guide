@@ -135,16 +135,19 @@
           <option value="3">執行中</option>
         </select>
         <!-- 小尺寸 -->
-        <select class="custom-select custom-select-sm">
+        <select class="custom-select custom-select-sm mb-3">
           <option selected>全部</option>
           <option value="1">成功</option>
           <option value="2">失敗</option>
           <option value="3">執行中</option>
         </select>
+        <!-- Disabled -->
+        <select class="custom-select custom-select-sm disabled">
+          <option>Disabled</option>
+        </select>
       </div>
     </div>
-<pre>
-<code class="haml">
+<pre><code class="haml">
 &lt;select class=&quot;custom-select mb-3&quot;&gt;
   &lt;option selected&gt;全部&lt;/option&gt;
   &lt;option value=&quot;1&quot;&gt;成功&lt;/option&gt;
@@ -152,15 +155,19 @@
   &lt;option value=&quot;3&quot;&gt;執行中&lt;/option&gt;
 &lt;/select&gt;
 &lt;!-- 小尺寸 --&gt;
-&lt;select class=&quot;custom-select custom-select-sm&quot;&gt;
+&lt;select class=&quot;custom-select custom-select-sm mb-3&quot;&gt;
   &lt;option selected&gt;全部&lt;/option&gt;
   &lt;option value=&quot;1&quot;&gt;成功&lt;/option&gt;
   &lt;option value=&quot;2&quot;&gt;失敗&lt;/option&gt;
   &lt;option value=&quot;3&quot;&gt;執行中&lt;/option&gt;
 &lt;/select&gt;
+&lt;!-- Disabled --&gt;
+&lt;select class=&quot;custom-select custom-select-sm disabled&quot;&gt;
+  &lt;option&gt;Disabled&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
 
-</code>
-</pre>
+</code></pre>
 <p>上面範例將產生一DIV容器包裹隱藏的原select跟樣式化的元素</p>
 <pre>
 <code class="haml">
