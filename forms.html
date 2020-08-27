@@ -28,65 +28,63 @@
         <div class="form-group row">
           <label class="col-1 col-form-label">長度6</label>
           <div class="col-6">
-            <input class="form-control">
+            <input class="form-control" type="text">
           </div>
         </div>
         <!-- 長度4 -->
         <div class="form-group row">
           <label class="col-1 col-form-label">長度4</label>
           <div class="col-4">
-            <input class="form-control">
+            <input class="form-control" type="text">
           </div>
         </div>
         <!-- 長度2 -->
         <div class="form-group row">
           <label class="col-1 col-form-label">長度2</label>
           <div class="col-2">
-            <input class="form-control">
+            <input class="form-control" type="text">
           </div>
         </div>
         <!-- 長度1 -->
         <div class="form-group row">
           <label class="col-1 col-form-label">長度1</label>
           <div class="col-1">
-            <input class="form-control">
+            <input class="form-control" type="text">
           </div>
         </div>
       </div>
     </div>
-<pre>
-<code class="haml">
+<pre><code class="haml">
 &lt;!-- 長度6 --&gt;
-&lt;div class=&quot;form-group row&quot;&gt;
-  &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度6&lt;/label&gt;
-  &lt;div class=&quot;col-6&quot;&gt;
-    &lt;input class=&quot;form-control&quot;&gt;
+  &lt;div class=&quot;form-group row&quot;&gt;
+    &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度6&lt;/label&gt;
+    &lt;div class=&quot;col-6&quot;&gt;
+      &lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- 長度4 --&gt;
-&lt;div class=&quot;form-group row&quot;&gt;
-  &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度4&lt;/label&gt;
-  &lt;div class=&quot;col-4&quot;&gt;
-    &lt;input class=&quot;form-control&quot;&gt;
+  &lt;!-- 長度4 --&gt;
+  &lt;div class=&quot;form-group row&quot;&gt;
+    &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度4&lt;/label&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      &lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- 長度2 --&gt;
-&lt;div class=&quot;form-group row&quot;&gt;
-  &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度2&lt;/label&gt;
-  &lt;div class=&quot;col-2&quot;&gt;
-    &lt;input class=&quot;form-control&quot;&gt;
+  &lt;!-- 長度2 --&gt;
+  &lt;div class=&quot;form-group row&quot;&gt;
+    &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度2&lt;/label&gt;
+    &lt;div class=&quot;col-2&quot;&gt;
+      &lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- 長度1 --&gt;
-&lt;div class=&quot;form-group row&quot;&gt;
-  &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度1&lt;/label&gt;
-  &lt;div class=&quot;col-1&quot;&gt;
-    &lt;input class=&quot;form-control&quot;&gt;
+  &lt;!-- 長度1 --&gt;
+  &lt;div class=&quot;form-group row&quot;&gt;
+    &lt;label class=&quot;col-1 col-form-label&quot;&gt;長度1&lt;/label&gt;
+    &lt;div class=&quot;col-1&quot;&gt;
+      &lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
 
-</code>
-</pre>
+</code></pre>
     <h3></h3>
     <p>加入disabled屬性使其禁用，加入<code class="haml">.is-invalid</code>類別呈現紅色警告框</p>
     <div class="card">
@@ -95,35 +93,31 @@
           <!-- Disabled -->
           <label class="col-1 col-form-label">標題</label>
           <div class="col-4">
-            <input class="form-control" placeholder="Disabled input" disabled>
+            <input class="form-control" type="text" placeholder="Disabled input" disabled>
           </div>
           <div class="col-1"></div>
-          <!-- invalid -->
+          <!-- 紅色警告框 -->
           <label class="col-1 col-form-label">標題</label>
           <div class="col-4">
-            <input class="form-control is-invalid" placeholder="invalid">
+            <input class="form-control is-invalid" type="text" placeholder="invalid">
           </div>
         </div>
       </div>
     </div>
-<pre>
-<code class="haml">
-&lt;div class=&quot;form-group row&quot;&gt;
-  &lt;!-- Disabled --&gt;
+<pre><code class="haml">
+&lt;!-- Disabled --&gt;
   &lt;label class=&quot;col-1 col-form-label&quot;&gt;標題&lt;/label&gt;
   &lt;div class=&quot;col-4&quot;&gt;
-    &lt;input class=&quot;form-control&quot; placeholder=&quot;Disabled input&quot; disabled&gt;
+    &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Disabled input&quot; disabled&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-1&quot;&gt;&lt;/div&gt;
-  &lt;!-- invalid --&gt;
+  &lt;!-- 紅色警告框 --&gt;
   &lt;label class=&quot;col-1 col-form-label&quot;&gt;標題&lt;/label&gt;
   &lt;div class=&quot;col-4&quot;&gt;
-    &lt;input class=&quot;form-control is-invalid&quot; placeholder=&quot;invalid&quot;&gt;
+    &lt;input class=&quot;form-control is-invalid&quot; type=&quot;text&quot; placeholder=&quot;invalid&quot;&gt;
   &lt;/div&gt;
-&lt;/div&gt;
 
-</code>
-</pre>
+</code></pre>
     <h1>Dropdown</h1>
     <p>使用<code class="haml">&lt;select&gt;</code>標籤styleselect.js將會產生選單樣式化的DOM，元素外框容器則依select給的類別定義，使用<code class="html">.custom-select</code>。預設尺寸高度為38px，較小尺寸的高度為32px，加入<code class="html">.custom-select-sm</code>類別使用。</p>
     <div class="card">
@@ -256,28 +250,38 @@
 
 </code>
 </pre>
-    <p>muliple不具傳值功能僅顯示用</p>
+    <p>
+      indeterminate狀態僅顯示用，值仍然是unchecked。無法在HTML中設置checkbox的狀態為indeterminate。
+      因為HTML中沒有indeterminate這個屬性，可以通過Javascript腳本來設置：<code class="haml">document.getElementById(&apos;some-checkbox&apos;).indeterminate=true</code>
+      或者通過jQuery設置：<code class="haml">$(&apos;#some-checkbox&apos;).prop(&quot;indeterminate&quot;, true)</code>
+    </p>
     <div class="card">
       <div class="card-body">
         <div class="image-check">
-          <div class="styled-checkbox muliple"></div>
-          <label>muliple</label>
-          <div class="styled-checkbox muliple disabled"></div>
-          <label>Disabled muliple</label>
+          <input type="checkbox" name="exampleCheckbox2" id="muliple1">
+          <label for="muliple1">muliple</label>
+          <input type="checkbox" name="exampleCheckbox2" id="muliple2" disabled>
+          <label for="muliple2">Disabled muliple</label>
         </div>
+        <script>
+          document.getElementById('muliple1').indeterminate=true;
+          document.getElementById('muliple2').indeterminate=true;
+        </script>
       </div>
     </div>
-<pre>
-<code class="haml">
+<pre><code class="haml">
 &lt;div class=&quot;image-check&quot;&gt;
-  &lt;div class=&quot;styled-checkbox muliple&quot;&gt;&lt;/div&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;exampleCheckbox2&quot; id=&quot;muliple1&quot;&gt;
   &lt;label&gt;muliple&lt;/label&gt;
-  &lt;div class=&quot;styled-checkbox muliple disabled&quot;&gt;&lt;/div&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;exampleCheckbox2&quot; id=&quot;muliple2&quot; disabled&gt;
   &lt;label&gt;Disabled muliple&lt;/label&gt;
 &lt;/div&gt;
+&lt;script&gt;
+  document.getElementById(&#x27;muliple1&#x27;).indeterminate=true;
+  document.getElementById(&#x27;muliple2&#x27;).indeterminate=true;
+&lt;/script&gt;
 
-</code>
-</pre>
+</code></pre>
   </div>
 </body>
 
