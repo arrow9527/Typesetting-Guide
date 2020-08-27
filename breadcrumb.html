@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>勞保局展示</title>
+	<script src="../js/initial.js"></script>
+	<script src="./Navbar.js"></script>
+	<!-- highlight.js v9.12.0 -->
+	<link href="./default.min.css" rel="stylesheet" />
+	<script src="./highlight.min.js"></script>
+</head>
+<script>
+	$(document).ready(function () {
+		hljs.initHighlightingOnLoad();
+	});
+</script>
+
+<body>
+	<!--內容區-->
+	<div class="container">
+		<h1>Breadcrumb</h1>
+		<h3></h3>
+		<p>說明該頁面在哪個路徑的層級與位置。當標籤<code class="haml">&lt;nav id=&quot;page-top&quot;&gt;&lt;/nav&gt;</code>存在時createBreadcrumb.js將自動產麵包屑，並顯示載入頁面的時間。</p>
+		<div class="card">
+			<div class="card-body">
+				<nav id="page-top">
+					<ol class="breadcrumb float-left">
+						<li class="breadcrumb-item">所有連結 </li>
+						<li class="breadcrumb-item">排版範例</li>
+						<li class="breadcrumb-item">查詢下方多column grid</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<!--END Breadcrumb-->
+
+	</div>
+</body>
+
+</html>
