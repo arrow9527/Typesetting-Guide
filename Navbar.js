@@ -30,6 +30,7 @@ function insertNavbar(){
 				.append('<a class="nav-link dropdown-toggle" href="#" id="componentsDropdown" data-toggle="dropdown">Components</a>')
 				.append(
 				  $('<div/>').addClass('dropdown-menu').attr('aria-labelledby','componentsDropdown')
+				  .append('<a class="dropdown-item" href="./breadcrumb.html">Breadcrumb</a>')
 				  .append('<a class="dropdown-item" href="./buttons.html">Buttons</a>')
 				  .append('<a class="dropdown-item" href="./dialogs.html">Dialogs</a>')
 				  .append('<a class="dropdown-item" href="./forms.html">Forms</a>')
