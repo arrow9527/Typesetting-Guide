@@ -29,7 +29,7 @@
 			<li>卡片四週邊距留24px , 導角12 radius , 陰影 Y:2dp, blur:20px , #a9a9a9</li>
 		</ul>
 		<div class="card">
-			<div class="card-body">
+			<div class="card-body" style="background: rgba(41,41,41,.16);">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -78,7 +78,7 @@
 		<!--END 純文字顯示-->
 		<h2>表單dialog</h2>
 		<div class="card">
-			<div class="card-body">
+			<div class="card-body" style="background: rgba(41,41,41,.16);">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -155,8 +155,67 @@
 
 </code></pre>
 		<!--END 表單dialog-->
+		<h2>中-寬680px (用於表單dialog）</h2>
+		<div class="card">
+			<div class="card-body">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+					開啟Dialogs
+				</button>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal1" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title">表單dialog</h2>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group row">
+								<label for="no" class="col-2 col-form-label">欄位名稱</label>
+								<div class="col image-check">
+									<input type="radio" name="exampleRadios" id="exampleRadios1">
+									<label for="exampleRadios1">整期</label>
+									<input type="radio" name="exampleRadios" id="exampleRadios2">
+									<label for="exampleRadios2">指定起-迄年月</label>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="no" class="col-2 col-form-label">欄位名稱</label>
+								<div class="col">
+									<input type="text" class="form-control" id="no">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="no" class="col-2 col-form-label">欄位名稱</label>
+								<div class="col image-check">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+									<label for="inlineCheckbox1">整期</label>
+									<input type="checkbox" id="inlineCheckbox2" value="option2">
+									<label for="inlineCheckbox2">繳款單聯</label>
+									<input type="checkbox" id="inlineCheckbox3" value="option3">
+									<label for="inlineCheckbox3">明細聯</label>
+									<div class="form-group">
+									  <input type="checkbox" id="inlineCheckbox4" value="option3">
+									  <label for="inlineCheckbox4">指定起-迄年月</label>
+									  <input class="form-control mr-1 " type="text" style="display: inline-block;width: 122px;">~<input class="form-control ml-1" type="text" style="display: inline-block;width: 122px;">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-normal" data-dismiss="modal">關閉</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END 中-寬680px-->
 		<h2>大-寬800px (帶有 grid 的 dialog）</h2>
-		<p>grid 規格請參見「<a href="tables.html#Description">Description</a>」，搜尋互動請參見「Search」</p>
+		<p>grid 規格請參見「<a href="tables.html#Description">Description</a>」</p>
 		<div class="card">
 			<div class="card-body">
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -169,7 +228,7 @@
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h2 class="modal-title" id="exampleModalLabel">有grid及再次查詢的dialog</h2>
+						<h2 class="modal-title" id="exampleModalLabel">有grid的dialog</h2>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						</button>
 					</div>
