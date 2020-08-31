@@ -1140,12 +1140,17 @@
 </code></pre>
 		<!--END 上方帶分類表-->
 		<h2>敘述性列表中的 action</h2>
-		<p>文字置中對齊，使用<code class="haml">.text-center</code>；文字靠右對齊，使用<code class="haml">.text-right</code></p>
+		<p>文字置中對齊，使用<code class="haml">.text-center</code>；文字靠右對齊，使用<code class="haml">.text-right</code>。</p>
+		<p>表內checkbox選項對齊方式：</p>
+		<ol>
+			<li>令標題checkbox置左，如果標題字數比內文多可省略(下面例子可省略)</li>
+			<li>內文checkbox加入<code class="haml">style=&quot;margin-left: 7px;&quot;</code>補齊thead與tbody設定的間距差</li>
+		</ol>
 		<div class="card">
 			<table class="table table-custom">
 				<thead>
 					<tr class="d-flex">
-						<th class="col-1">
+						<th class="col-1 text-left">
 							<div class="image-check">
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll">全選</label>
@@ -1166,7 +1171,9 @@
 				<tbody>
 					<tr class="d-flex">
 						<td class="col-1">
-							<div class="image-check"><input type="checkbox"></div>
+							<div class="image-check" style="margin-left: 7px;">
+								<input type="checkbox">
+							</div>
 						</td>
 						<td class="col-1">1</td>
 						<td class="col-1">0812D3010</td>
@@ -1189,8 +1196,57 @@
 			</table>
 		</div>
 		
-<pre><code class="haml"></code></pre>
-		<!---->
+<pre><code class="haml">
+&lt;table class=&quot;table table-custom&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr class=&quot;d-flex&quot;&gt;
+			&lt;th class=&quot;col-1 text-left&quot;&gt;
+				&lt;div class=&quot;image-check&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; id=&quot;selectAll&quot;&gt;
+					&lt;label for=&quot;selectAll&quot;&gt;全選&lt;/label&gt;
+				&lt;/div&gt;
+			&lt;/th&gt;
+			&lt;th class=&quot;col-1&quot;&gt;序號&lt;/th&gt;
+			&lt;th class=&quot;col-1&quot;&gt;繳款單編號&lt;/th&gt;
+			&lt;th class=&quot;col-1&quot;&gt;受理日期&lt;/th&gt;
+			&lt;th class=&quot;col-1&quot;&gt;預繳時未收金額&lt;/th&gt;
+			&lt;th class=&quot;col-1&quot;&gt;預繳時待扣抵金額&lt;/th&gt;
+			&lt;th class=&quot;col-1&quot;&gt;預繳月數&lt;/th&gt;
+			&lt;th class=&quot;col-1&quot;&gt;預繳金額&lt;/th&gt;
+			&lt;th class=&quot;col-1&quot;&gt;承辦人員&lt;/th&gt;
+			&lt;th class=&quot;col-1&quot;&gt;列印註記&lt;/th&gt;
+			&lt;th class=&quot;col-2&quot;&gt;操作區&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr class=&quot;d-flex&quot;&gt;
+			&lt;td class=&quot;col-1&quot;&gt;
+				&lt;div class=&quot;image-check&quot; style=&quot;margin-left: 7px;&quot;&gt;
+					&lt;input type=&quot;checkbox&quot;&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;col-1&quot;&gt;1&lt;/td&gt;
+			&lt;td class=&quot;col-1&quot;&gt;0812D3010&lt;/td&gt;
+			&lt;td class=&quot;col-1&quot;&gt;1207&lt;/td&gt;
+			&lt;td class=&quot;col-1 text-right&quot;&gt;6,000&lt;/td&gt;
+			&lt;td class=&quot;col-1 text-right&quot;&gt;3,000&lt;/td&gt;
+			&lt;td class=&quot;col-1 text-right&quot;&gt;6&lt;/td&gt;
+			&lt;td class=&quot;col-1 text-right&quot;&gt;3,000&lt;/td&gt;
+			&lt;td class=&quot;col-1&quot;&gt;N&lt;/td&gt;
+			&lt;td class=&quot;col-1&quot;&gt;n00132&lt;/td&gt;
+			&lt;td class=&quot;col-2 text-center&quot;&gt;
+				&lt;nav class=&quot;link-group&quot;&gt;
+					&lt;a href=&quot;javascript:&quot; class=&quot;link-item&quot;&gt;明細&lt;/a&gt;
+					&lt;a href=&quot;javascript:&quot; class=&quot;link-item&quot;&gt;修改&lt;/a&gt;
+					&lt;a href=&quot;javascript:&quot; class=&quot;link-item&quot;&gt;刪除&lt;/a&gt;
+				&lt;/nav&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+</code></pre>
+		<!--END 敘述性列表中的 action-->
 	</div>
 </body>
 </html>
