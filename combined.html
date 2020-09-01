@@ -37,17 +37,53 @@
 		<div class="card">
 			<div class="card-body">
 				<div class="form-group image-check">
-					<label><input class="mr-1" type="radio">指定每</label><input class="form-control mx-1" type="text" style="display: inline-block;width: 122px;">提供資料
+					<label><input class="mr-1" type="radio">指定每</label>
+					<input class="form-control mx-1" type="text" style="display: inline-block;width: 122px;">提供資料
+					<div style="display:inline-block;position: relative;">
+						<input class="form-control mr-1 " type="text" style="display: inline-block;width: 122px;">~<input class="form-control ml-1" type="text" style="display: inline-block;width: 122px;">
+						<div class="form-text text-muted" style="position: absolute;bottom: -20px;left: 8px;">（如民國97年10月，請輸入09710）</div>
+					</div>
 				</div>
 			</div>
 		</div>
 <pre><code class="haml">
 &lt;div class=&quot;form-group image-check&quot;&gt;
-	&lt;label&gt;&lt;input class=&quot;mr-1&quot; type=&quot;radio&quot;&gt;指定每&lt;/label&gt;&lt;input class=&quot;form-control mx-1&quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;提供資料
+	&lt;label&gt;&lt;input class=&quot;mr-1&quot; type=&quot;radio&quot;&gt;指定每&lt;/label&gt;
+	&lt;input class=&quot;form-control mx-1&quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;提供資料
+	&lt;div style=&quot;display:inline-block;position: relative;&quot;&gt;
+		&lt;input class=&quot;form-control mr-1 &quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;~&lt;input class=&quot;form-control ml-1&quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;
+		&lt;div class=&quot;form-text text-muted&quot; style=&quot;position: absolute;bottom: -20px;left: 8px;&quot;&gt;（如民國97年10月，請輸入09710）&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 
 </code></pre>
 		<!--END radio 單選組合-->
+		<h3>checkbox 組合</h3>
+		<p>checkbox + 文字 + text field</p>
+		<div class="card">
+			<div class="card-body">
+				<div class="form-group image-check">
+					<label><input class="mr-1" type="checkbox">指定每</label>
+					<input class="form-control mx-1" type="text" style="display: inline-block;width: 122px;">提供資料
+					<div style="display:inline-block;position: relative;">
+						<input class="form-control mr-1 " type="text" style="display: inline-block;width: 122px;">~<input class="form-control ml-1" type="text" style="display: inline-block;width: 122px;">
+						<div class="form-text text-muted" style="position: absolute;bottom: -20px;left: 8px;">（如民國97年10月，請輸入09710）</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<pre><code class="haml">
+&lt;div class=&quot;form-group image-check&quot;&gt;
+	&lt;label&gt;&lt;input class=&quot;mr-1&quot; type=&quot;radio&quot;&gt;指定每&lt;/label&gt;
+	&lt;input class=&quot;form-control mx-1&quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;提供資料
+	&lt;div style=&quot;display:inline-block;position: relative;&quot;&gt;
+		&lt;input class=&quot;form-control mr-1 &quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;~&lt;input class=&quot;form-control ml-1&quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;
+		&lt;div class=&quot;form-text text-muted&quot; style=&quot;position: absolute;bottom: -20px;left: 8px;&quot;&gt;（如民國97年10月，請輸入09710）&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+		<!--END checkbox 組合-->
 		<h3>button 按鈕組合</h3>
 		<p>有主動作的按鈕組</p>
 		<div class="card">
