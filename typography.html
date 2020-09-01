@@ -21,7 +21,15 @@
 <script>
 	$ (document).ready (function () {
 		hljs.initHighlightingOnLoad();
-    });
+		// console.log(Number(1234).toLocaleString());
+		// let prices = 9999;
+		// alert(prices.toLocaleString('zh-TW'));
+	});
+	function toCurrency(num){
+		var parts = num.toString().split('.');
+		parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		return parts.join('.');
+	}
 </script>
 <body>
 	<!--內容區-->
@@ -111,7 +119,7 @@
 
 </code>
 </pre>
-		<p>數字一律齊右，數字且為金額、數量、筆數需加千分號，使用類別<code class="haml">.text-right</code>。</p>
+		<p>數字一律齊右，數字且為金額、數量、筆數需加千分號，使用類別<code class="haml">.text-right</code>。千分號格式，會經由「共用function」處理</p>
 		<div class="card">
 			<div class="card-body">
 				<p class="text-right">202012240900</p>
