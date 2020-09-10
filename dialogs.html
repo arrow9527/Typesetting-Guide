@@ -163,7 +163,62 @@
 				</button>
 			</div>
 		</div>
-		<!-- Modal -->
+<pre><code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;modal&quot; data-target=&quot;#exampleModal1&quot;&gt;
+	開啟Dialog
+&lt;/button&gt;
+&lt;!-- 開啟Dialog --&gt;
+&lt;div class=&quot;modal&quot; id=&quot;exampleModal1&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+	&lt;div class=&quot;modal-dialog modal-lg&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;
+				&lt;h2 class=&quot;modal-title&quot;&gt;表單dialog&lt;/h2&gt;
+				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-body&quot;&gt;
+				&lt;form&gt;
+					&lt;div class=&quot;form-group row&quot;&gt;
+						&lt;label for=&quot;no&quot; class=&quot;col-2 col-form-label&quot;&gt;欄位名稱&lt;/label&gt;
+						&lt;div class=&quot;col image-check&quot; style=&quot;padding-top: calc(.375rem + 1px);&quot;&gt;
+							&lt;input type=&quot;radio&quot; name=&quot;exampleRadios&quot; id=&quot;exampleRadios1&quot;&gt;
+							&lt;label for=&quot;exampleRadios1&quot;&gt;整期&lt;/label&gt;
+							&lt;input type=&quot;radio&quot; name=&quot;exampleRadios&quot; id=&quot;exampleRadios2&quot;&gt;
+							&lt;label for=&quot;exampleRadios2&quot;&gt;指定起-迄年月&lt;/label&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;form-group row&quot;&gt;
+						&lt;label for=&quot;no&quot; class=&quot;col-2 col-form-label&quot;&gt;欄位名稱&lt;/label&gt;
+						&lt;div class=&quot;col&quot;&gt;
+							&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;no&quot;&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;form-group row&quot;&gt;
+						&lt;label for=&quot;no&quot; class=&quot;col-2 col-form-label&quot;&gt;欄位名稱&lt;/label&gt;
+						&lt;div class=&quot;col image-check&quot; style=&quot;padding-top: calc(.375rem + 1px);&quot;&gt;
+							&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox1&quot; value=&quot;option1&quot;&gt;
+							&lt;label for=&quot;inlineCheckbox1&quot;&gt;整期&lt;/label&gt;
+							&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox2&quot; value=&quot;option2&quot;&gt;
+							&lt;label for=&quot;inlineCheckbox2&quot;&gt;繳款單聯&lt;/label&gt;
+							&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox3&quot; value=&quot;option3&quot;&gt;
+							&lt;label for=&quot;inlineCheckbox3&quot;&gt;明細聯&lt;/label&gt;
+							&lt;div class=&quot;form-group&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox4&quot; value=&quot;option3&quot;&gt;
+								&lt;label for=&quot;inlineCheckbox4&quot;&gt;指定起-迄年月&lt;/label&gt;
+								&lt;input class=&quot;form-control mr-1 &quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;~&lt;input class=&quot;form-control ml-1&quot; type=&quot;text&quot; style=&quot;display: inline-block;width: 122px;&quot;&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/form&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-footer justify-content-center&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-normal&quot; data-dismiss=&quot;modal&quot;&gt;關閉&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+		<!-- 開啟Dialog -->
 		<div class="modal" id="exampleModal1" tabindex="-1" aria-hidden="true">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
@@ -223,7 +278,7 @@
 				</button>
 			</div>
 		</div>
-		<!-- Modal -->
+		<!-- Dialog -->
 		<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content">
@@ -309,6 +364,98 @@
 				</div>
 			</div>
 		</div>
+<pre><code class="haml">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;modal&quot; data-target=&quot;#exampleModal&quot;&gt;
+	開啟Dialog
+&lt;/button&gt;
+&lt;!-- Dialog --&gt;
+&lt;div class=&quot;modal&quot; id=&quot;exampleModal&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+	&lt;div class=&quot;modal-dialog modal-xl&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;
+				&lt;h2 class=&quot;modal-title&quot; id=&quot;exampleModalLabel&quot;&gt;有grid的dialog&lt;/h2&gt;
+				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-body&quot;&gt;
+				&lt;table class=&quot;table table-custom table-striped&quot;&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th&gt;計費年月&lt;/th&gt;
+							&lt;th&gt;縣市別&lt;/th&gt;
+							&lt;th&gt;狀態&lt;/th&gt;
+							&lt;th&gt;完成筆數&lt;/th&gt;
+							&lt;th&gt;異常筆數
+						&lt;/th&gt;&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td&gt;09712&lt;/td&gt;
+							&lt;td&gt;嘉義縣&lt;/td&gt;
+							&lt;td&gt;核定&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;39,876&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;0&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;09712&lt;/td&gt;
+							&lt;td&gt;台中縣&lt;/td&gt;
+							&lt;td&gt;&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;39,876&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;0&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;09712&lt;/td&gt;
+							&lt;td&gt;基隆市&lt;/td&gt;
+							&lt;td&gt;執行失敗&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;39,876&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;0&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;09712&lt;/td&gt;
+							&lt;td&gt;高雄市&lt;/td&gt;
+							&lt;td&gt;核定&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;39,876&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;0&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;09712&lt;/td&gt;
+							&lt;td&gt;嘉義縣&lt;/td&gt;
+							&lt;td&gt;&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;39,876&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;0&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;09712&lt;/td&gt;
+							&lt;td&gt;台中縣&lt;/td&gt;
+							&lt;td&gt;核定&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;39,876&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;0&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;09712&lt;/td&gt;
+							&lt;td&gt;基隆市&lt;/td&gt;
+							&lt;td&gt;核定&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;39,876&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;0&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;09712&lt;/td&gt;
+							&lt;td&gt;高雄市&lt;/td&gt;
+							&lt;td&gt;核定&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;39,876&lt;/td&gt;
+							&lt;td class=&quot;text-right&quot;&gt;0&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-footer justify-content-center&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-normal&quot; data-dismiss=&quot;modal&quot;&gt;關閉&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+		<!--END 大-寬800px-->
 	</div>
 </body>
 
