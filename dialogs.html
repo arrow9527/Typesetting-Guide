@@ -467,6 +467,35 @@
 		<p>訊息樣式</p>
 		<pre><code class="javascript">Dialog.info('文字文字文字');</code></pre>
 		<!--END 通過JavaScript新增同時開啟Dialog-->
+
+		<h2>confirm</h2>
+		<p>顯示一個具有一個消息和兩個可選按鈕(確定和取消)的模態對話框。</p>
+		<div class="card">
+			<div class="card-body" style="background: rgba(41,41,41,.16);">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title"></h1><button class="close"></button>
+						</div>
+						<div class="modal-body">
+							<p>你確定嗎?</p>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-normal">確定</button><button class="btn btn-outline-normal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<pre><code class="haml">
+Dialog.confirm(&quot;你確定嗎?&quot;).done(function(){
+  alert(&#x27;你按了確定&#x27;);
+}).fail(function(){
+  alert(&#x27;你按了取消&#x27;);
+});
+
+</code></pre>
+		<!--END confirm-->
 	</div>
 </body>
 
