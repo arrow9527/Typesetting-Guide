@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>勞保局展示</title>
+	<script src="../js/initial.js"></script>
+  	<script src="./Navbar.js"></script>
+  	<!-- highlight.js v9.12.0 -->
+	<link href="./default.min.css" rel="stylesheet" />
+	<script src="./highlight.min.js"></script>
+	<style>
+		.text-dark h5 {
+            color: #343a40!important;
+        }
+        .text-white h5 {
+            color: #fff!important;
+        }
+        /*背景顏色*/
+        .gb-gray {
+            background-color: #f3f3f3!important;
+        }
+        .pale-gray {
+            background-color: #eeeeee!important;
+        }
+        .light-gray {
+            background-color: #a9a9a9!important;
+        }
+        .warm-gray {
+            background-color: #7e7e7e!important;
+        }
+        .dark-gray {
+            background-color: #292929!important;
+        }
+        .grass-green {
+            background-color: #a6d578!important;
+        }
+        .parrot-green {
+            background-color: #679f32!important;
+        }
+        .light-green {
+            background-color: #f1fee3!important;
+        }
+        .cherry-purple {
+            background-color: #a14f76!important;
+        }
+        .crimson-red {
+            background-color: #e64551!important;
+        }
+        .rose-pink {
+            background-color: #ffeff1!important;
+        }
+        .teclis-blue {
+            background-color: #0883d2!important;
+        }
+        .vivid-blue {
+            background-color: #3eb4ff!important;
+        }
+	</style>
+</head>
+<script>
+	$ (document).ready (function () {
+		hljs.initHighlightingOnLoad();
+	});
+</script>
+<body>
+	<!--內容區-->
+	<div class="container">
+		<h3>Colors</h3>
+        <p>中英文內文文字一律齊左，使用類別<code class="haml">.text-left</code>或預設。</h5>
+        <div style="display: flex;flex-wrap: wrap;">
+            <div class="p-3 mb-2 gb-gray text-dark" style="display: inline-block;">
+                <h5 class="font-weight-bold">gb-gray</h5>
+                #f3f3f3<br>新列表底色
+            </div>
+            <div class="p-3 mb-2 pale-gray text-dark" style="display: inline-block;">
+                <h5 class="font-weight-bold">pale-gray</h5>
+                #EEEEEE<br>list分隔線(白底)
+            </div>
+            <div class="p-3 mb-2 light-gray text-white" style="display: inline-block;">
+                <h5 class="font-weight-bold">light-gray</h5>
+                #A9A9A9<br>外框色<br>陰影色<br>disable
+            </div>
+            <div class="p-3 mb-2 dark-gray text-white" style="display: inline-block;">
+                <h5 class="font-weight-bold">dark-gray</h5>
+                #292929<br>主要文字
+            </div>
+        </div>
+        <div style="display: flex;flex-wrap: wrap;">
+            <div class="p-3 mb-2 grass-green text-dark" style="display: inline-block;">
+                <h5 class="font-weight-bold">grass green</h5>
+                #A6D578<br>主色、背景色<br>互動色、互動陰影色
+            </div>
+            <div class="p-3 mb-2 parrot-green text-white" style="display: inline-block;">
+                <h5 class="font-weight-bold">parrot green</h5>
+                #679F32<br>主 action色
+            </div>
+            <div class="p-3 mb-2 light-green text-dark" style="display: inline-block;">
+                <h5 class="font-weight-bold">light green</h5>
+                #F1FEE3<br>互動色
+            </div>
+        </div>
+        <div style="display: flex;flex-wrap: wrap;">
+            <div class="p-3 mb-2 cherry-purple text-white" style="display: inline-block;">
+                <h5 class="font-weight-bold">cherry purple</h5>
+                #A14F76<br>提示文字
+            </div>
+            <div class="p-3 mb-2 crimson-red text-white" style="display: inline-block;">
+                <h5 class="font-weight-bold">crimson red</h5>
+                #E64551<br>錯誤狀態、重要提示
+            </div>
+            <div class="p-3 mb-2 rose-pink text-dark" style="display: inline-block;">
+                <h5 class="font-weight-bold">rose pink</h5>
+                #FFEFF1<br>錯誤通知背景色
+            </div>
+        </div>
+        <div style="display: flex;flex-wrap: wrap;">
+            <div class="p-3 mb-2 teclis-blue text-white" style="display: inline-block;">
+                <h5 class="font-weight-bold">teclis blue</h5>
+                #0883D2<br>外部超連結
+            </div>
+            <div class="p-3 mb-2 vivid-blue text-white" style="display: inline-block;">
+                <h5 class="font-weight-bold">vivid blue</h5>
+                #3EB4FF<br>輔助色
+            </div>
+        </div>
+        <!--END colors-->
+	</div>
+	<!--內容區結束-->
+
+</body>
+</html>
