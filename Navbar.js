@@ -1,7 +1,7 @@
 $ (document).ready (function () {
     insertNavbar();
 
-    var page=location.pathname.replace('/'+contextPath+'/', '');
+    var page=location.pathname.replace(contextPath+'/', '');
     page=page.replace('page/','');//replace子目錄
     page=page.replace('.','');//replace附檔名的點
 	//console.log(page);
@@ -79,6 +79,9 @@ function insertNavbar(){
 			// )
 			.append(
 				$('<li/>').addClass('nav-item').attr('id','spacinghtml').append('<a class="nav-link" href="./spacing.html">Spacing</a>')
+			)
+			.append(
+				$('<li/>').addClass('nav-item').attr('id','colorshtml').append('<a class="nav-link" href="./colors.html">Colors</a>')
 			)
 		)
     );
